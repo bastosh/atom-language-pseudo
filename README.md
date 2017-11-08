@@ -10,12 +10,12 @@ cd ~/.atom/packages
 git clone https://github.com/bastosh/atom-pseudo-fr.git
 ```
 Restart Atom and you're good to go!  
-![restart](https://github.com/bastosh/atom-pseudo-fr/img/restart.png)
+![restart](https://github.com/bastosh/atom-pseudo-fr/blob/master/img/restart.png?raw=true)
 
 ## Overview (monokai theme)
 
-![capture1](https://github.com/bastosh/atom-pseudo-fr/exemples/capture1.png "Pseudo-code syntax highlight")
+![capture1](https://github.com/bastosh/atom-pseudo-fr/blob/master/exemples/capture1.png?raw=true "Pseudo-code syntax highlight")
 
-![capture2](https://github.com/bastosh/atom-pseudo-fr/exemples/capture2.png "Pseudo-code syntax highlight")
+![capture2](https://github.com/bastosh/atom-pseudo-fr/blob/master/exemples/capture2.png?raw=true "Pseudo-code syntax highlight")
 
-![capture3](https://github.com/bastosh/atom-pseudo-fr/exemples/capture3.png "Pseudo-code syntax highlight")
+![capture3](https://github.com/bastosh/atom-pseudo-fr/blob/master/exemples/capture3.png?raw=true "Pseudo-code syntax highlight")
