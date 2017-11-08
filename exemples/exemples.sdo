@@ -8,7 +8,7 @@ Vars A, B en Chaîne de caractères
 Début
   A <- "Gloubi"
   B <- "Boulga"
-  Écrire A & C
+  Écrire A & B
 Fin
 
 // Condition
