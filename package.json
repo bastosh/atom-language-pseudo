@@ -1,0 +1,24 @@
+{
+  "name": "atom-pseudo-fr",
+  "version": "0.1.0",
+  "description": "Adds syntax highlighting support for french pseudo-code.",
+  "homepage": "https://github.com/bastosh/atom-pseudo-fr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bastosh/atom-pseudo-fr"
+  },
+  "keywords": [
+    "french",
+    "pseudocode",
+    "pseudo-code",
+    "CNAM"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bastosh/atom-pseudo-fr/issues"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}

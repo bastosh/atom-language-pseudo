@@ -1,0 +1,256 @@
+'scopeName': 'source.pseudo'
+'fileTypes': [
+  'sdo'
+  'pseudo'
+  ]
+'name': 'CNAM PseudoCode'
+'patterns': [
+  {
+    'captures':
+      '2':
+        'name': 'entity.name.function.sdo'
+    'match': '([a-zA-Z_?.$][\\w?.$]*)\\.([a-zA-Z_?.$][\\w?.$]*)\\s*'
+    'name': 'meta.function.sdo'
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]+)|(0(b|B)[01]+)|(0(o|O)[0-7]+)|([0-9]+(\\.[0-9]+)?)((e|E)[+-]?[0-9]+)?)\\b'
+    'name': 'constant.numeric.sdo'
+  }
+  {
+    'include': '#strings'
+  }
+  {
+    'include': '#comments'
+  }
+  {
+    'begin': '(^[ \\t]+)?(?=//)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.sdo'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '//'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.sdo'
+        'end': '\\n'
+        'name': 'comment.line.double-slash.sdo'
+      }
+    ]
+  }
+  {
+    'match': '(?<!\\.)\\b(Procédure|Fonction|Structure|Début|Fin|Var|Vars|Tableau|en|Numérique|Entier|Chaîne|de|caractères|Booléen|Sinon|Si|SinonSi|Pour|à|TantQue|FinSi|FinTantQue|Suivant|suivant|Pas|Renvoyer)(?!\\s*:)\\b'
+    'name': 'keyword.control.sdo'
+  }
+  {
+    'match': '(?<!\\.)\\bVrai(?!\\s*:)\\b'
+    'name': 'constant.language.boolean.true.sdo'
+  }
+  {
+    'match': '(?<!\\.)\\bFaux(?!\\s*:)\\b'
+    'name': 'constant.language.boolean.false.sdo'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bÉcrire)(\\s)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bEcrire)(\\s)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bLire)(\\s)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bRedim)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bEnt)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bAlea)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bLen)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bMid)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bLeft)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bRight)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function.sdo'
+    'match': '(?!>\\S)(\\bFind)'
+  }
+  {
+    'match': '\\/|-|\\+|=|<>|<=|>=|\\*|>|<|&'
+    'name': 'keyword.operator.logical.sdo'
+  }
+  {
+    'match': '\\b(NON|ET|OU|XOR)\\b'
+    'name': 'keyword.operator.logical.sdo'
+  }
+  {
+    'begin': '(?<=[\\[=(:+,!]|^|Retourner|&&|\\|\\|)\\s*(/)(?![/*+{}?])(?=.*/)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.definition.string.begin.sdo'
+    'end': '(/)[gimuy]*'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.string.end.sdo'
+    'name': 'string.regexp.sdo'
+    'patterns': [
+      {
+        'include': 'source.sdo.regexp'
+      }
+    ]
+  }
+  {
+    'match': ','
+    'name': 'meta.delimiter.object.comma.sdo'
+  }
+  {
+    'match': '\\.'
+    'name': 'meta.delimiter.method.period.sdo'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.section.scope.begin.sdo'
+      '2':
+        'name': 'punctuation.section.scope.end.sdo'
+    'comment': 'Allows the special return snippet to fire.'
+    'match': '(\\{)(\\})'
+  }
+  {
+    'match': '\\{|\\}'
+    'name': 'meta.brace.curly.sdo'
+  }
+  {
+    'match': '\\(|\\)'
+    'name': 'meta.brace.round.sdo'
+  }
+  {
+    'match': '\\[|\\]'
+    'name': 'meta.brace.square.sdo'
+  }
+  {
+    'match': '\\A#!.*$'
+    'name': 'comment.line.shebang.sdo'
+  }
+]
+'repository':
+  'strings':
+    'patterns': [
+      {
+        'begin': '\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.sdo'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.sdo'
+        'name': 'string.quoted.single.sdo'
+        'patterns': [
+          {
+            'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
+            'name': 'constant.character.escape.sdo'
+          }
+        ]
+      }
+      {
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.sdo'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.sdo'
+        'name': 'string.quoted.double.sdo'
+        'patterns': [
+          {
+            'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)'
+            'name': 'constant.character.escape.sdo'
+          }
+        ]
+      }
+      {
+        'begin': '`'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.sdo'
+        'end': '`'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.sdo'
+        'name': 'string.quoted.template.sdo'
+        'patterns': [
+          {
+            'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
+            'name': 'constant.character.escape.sdo'
+          }
+        ]
+      }
+    ]
+  'comments':
+    'patterns': [
+      {
+        'begin': '/\\*\\*(?!/)'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.sdo'
+        'patterns': [
+          {
+            'include': '#docblock'
+          }
+        ]
+        'end': '\\*/'
+        'name': 'comment.block.documentation.sdo'
+      }
+      {
+        'begin': '/\\*'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.sdo'
+        'end': '\\*/'
+        'name': 'comment.block.sdo'
+      }
+    ]

@@ -1,0 +1,92 @@
+/* --------------------------------------------------------
+   Coloration syntaxique pour le pseudo-code du CNAM PACA
+--------------------------------------------------------- */
+
+// Concaténation
+Procédure GloubiBoulga
+Vars A, B en Chaîne de caractères
+Début
+  A <- "Gloubi"
+  B <- "Boulga"
+  Écrire A & C
+Fin
+
+// Condition
+Procédure Coloration
+Var pseudoCode en Booléen
+Début
+  pseudoCode <- Vrai
+  Si pseudoCode
+    Écrire "Technicolor!"
+  FinSi
+Fin
+
+// Boucle TantQue
+Procédure Citation
+Var reponse en Chaîne de caractères
+Début
+  reponse <- ""
+  TantQue (reponse <> "OUI")
+    Écrire "Voulez-vous une citation désopilante ? (OUI/NON)"
+    Lire reponse
+  FinTantQue
+  Écrire "J'en étais sûr : 'Un clavier azerty en vaut deux'"
+Fin
+
+// Boucle Pour
+Procédure Manege
+Var tour en Numérique
+Début
+  Pour tour <- 1 à 5
+    Écrire "C'est le tour n°" & tour
+  tour Suivant
+Fin
+
+// Tableaux
+Procédure SaisieNotes
+Tableau notes() en Numérique
+Var nb en Numérique
+Début
+  Écrire "Combien y a-t-il de notes à saisir ?"
+  Lire nb
+  Redim notes(nb-1)
+  Pour i de 0 à nb-1
+    Écrire "Entrez la note n°" & i+1
+    Lire notes(i)
+  i Suivant
+Fin
+
+// Variables structurées
+Structure Annuaire
+  Nom en Chaîne de caractères
+  Prenom en Chaîne de caractères
+  Tel en Chaîne de caractères
+  Mail en Chaîne de caractères
+Fin Structure
+
+Var Personne en Annuaire
+
+Personne <- "Durand", "Pierre", "0442012345", "pierredurand@truc.com"
+
+Personne.Nom <- "Durand"
+Personne.Prenom <- "Pierre"
+
+Écrire Personne.Mail
+
+// Fonctions
+Ent(4.545) // Renvoie 4
+Alea() // Renvoie un nombre aléatoire entre 0 et 1
+Len("Durand") // Renvoie "6"
+Mid("Durand",2,3) // Renvoie "ura"
+Left("Durand",5) // Renvoie "Duran"
+Right("Durand",5) // Renvoie "urand"
+Find("Aujourd’hui il fait beau.","il") // Renvoie 13
+
+Fonction direBonjourAuMonde()
+Début
+  Var hello en Chaîne de caractères
+  hello <- "Hello World!"
+  Renvoyer hello
+Fin
+
+Écrire direBonjourAuMonde()
