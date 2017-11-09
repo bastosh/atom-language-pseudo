@@ -103,7 +103,7 @@ Personne <- “Durand”, “Pierre”, “0442012345”, "pierredurand@truc.com
 Personne.Nom <- “Durand”
 Personne.Prenom <- “Pierre”
 Personne.Tel <- “0442012345”
-Personne.Mail <- pierredurand@truc.com
+Personne.Mail <- "pierredurand@truc.com"
 ```
 #### Tableaux structurés
 ```
