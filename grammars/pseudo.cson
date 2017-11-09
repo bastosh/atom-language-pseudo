@@ -40,7 +40,7 @@
     ]
   }
   {
-    'match': '(?<!\\.)\\b(Procédure|Fonction|Structure|Début|Fin|Var|Vars|Tableau|en|Numérique|Entier|Chaîne|de|caractères|Booléen|Sinon|Si|SinonSi|Pour|à|TantQue|FinSi|FinTantQue|Suivant|suivant|Pas|Renvoyer)(?!\\s*:)\\b'
+    'match': '(?<!\\.)\\b(Procédure|Fonction|Structure|Début|Fin|Var|Vars|Tableau|en|Numérique|Entier|Réel|Chaîne|de|caractères|Booléen|Sinon|Si|SinonSi|Pour|à|TantQue|FinSi|FinTantQue|Suivant|suivant|Pas|Renvoyer)(?!\\s*:)\\b'
     'name': 'keyword.control.sdo'
   }
   {
