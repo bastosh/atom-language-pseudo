@@ -51,6 +51,11 @@ Renvoyer
 Entier // pour les nombres entiers
 Réel // pour les nombres décimaux
 ```
+### Instructions
+```
+Lire // La machine lit ce que l’homme a écrit
+Écrire // La machine écrit ce que l’homme doit pouvoir lire
+```
 
 ### Opérateurs
 ```
@@ -113,11 +118,7 @@ annuaire(N).Tel
 annuaire(N).Mail
 ```
 
-#### Fontions prédéfinies
-```
-Lire(nombreSaisi)
-Écrire("Hello World!")
-```
+#### Fonctions prédéfinies
 ```
 Ent(Numérique) // Renvoie la partie entière d'un nombre
 Alea() // Renvoie un nombre aléatoire entre 0 et 1
