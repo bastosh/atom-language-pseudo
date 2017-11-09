@@ -56,7 +56,9 @@ Réel // pour les nombres décimaux
 Lire // La machine lit ce que l’homme a écrit
 Écrire // La machine écrit ce que l’homme doit pouvoir lire
 ```
-
+```
+Redim tableau(N) // Permet de renseigner ou modifier la taille d'un tableau
+```
 ### Opérateurs
 ```
 <- // affectation
