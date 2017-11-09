@@ -134,7 +134,7 @@ Find(chaîne1,chaîne2) // Renvoie un nombre correspondant à la position de cha
 Fonction faireQuelqueChose(param1, param2)
 Début
   <insctructions>
-  Retourner <resultat>
+  Renvoyer <resultat>
 Fin
 ```
 
