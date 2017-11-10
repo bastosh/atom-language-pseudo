@@ -9,6 +9,12 @@
     'captures':
       '2':
         'name': 'entity.name.function.sdo'
+    'match': '(.+\\(.+\\)\\.)([A-Z].+)'
+  }
+  {
+    'captures':
+      '2':
+        'name': 'entity.name.function.sdo'
     'match': '([a-zA-Z_?.$][\\w?.$]*)\\.([a-zA-Z_?.$][\\w?.$]*)\\s*'
     'name': 'meta.function.sdo'
   }

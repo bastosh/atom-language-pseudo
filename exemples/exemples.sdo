@@ -73,6 +73,10 @@ Personne.Prenom <- "Pierre"
 
 Écrire Personne.Mail
 
+annuaire(N).Nom
+annuaire(N).Prenom
+annuaire(N).Tel
+
 // Fonctions
 Ent(4.545) // Renvoie 4
 Alea() // Renvoie un nombre aléatoire entre 0 et 1
