@@ -26,7 +26,7 @@ Procédure Citation
 Var reponse en Chaîne de caractères
 Début
   reponse <- ""
-  TantQue (reponse <> "OUI")
+  TantQue reponse <> "OUI"
     Écrire "Voulez-vous une citation désopilante ? (OUI/NON)"
     Lire reponse
   FinTantQue
